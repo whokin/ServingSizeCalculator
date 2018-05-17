@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.niragmehta.assignment2.CalculateServing">
+
+    <TextView
+        android:id="@+id/txtViewPot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/pot" />
+
+    <TextView
+        android:id="@+id/textViewPotName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtViewPot"
+        android:layout_alignBottom="@+id/txtViewPot"
+        android:layout_alignLeft="@+id/textViewWeightEmpty"
+        android:layout_alignStart="@+id/textViewWeightEmpty" />
+
+    <TextView
+        android:id="@+id/txtWeightEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtViewPot"
+        android:layout_alignStart="@+id/txtViewPot"
+        android:layout_below="@+id/txtViewPot"
+        android:layout_marginTop="16dp"
+        android:text="@string/weight_empty_g" />
+
+    <TextView
+        android:id="@+id/textViewWeightEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtWeightEmpty"
+        android:layout_alignBottom="@+id/txtWeightEmpty"
+        android:layout_alignLeft="@+id/PTWtWithFood"
+        android:layout_alignStart="@+id/PTWtWithFood" />
+
+    <TextView
+        android:id="@+id/txtViewWeightwithFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtWeightEmpty"
+        android:layout_alignStart="@+id/txtWeightEmpty"
+        android:layout_below="@+id/txtWeightEmpty"
+        android:layout_marginTop="40dp"
+        android:text="@string/weight_with_food_g" />
+
+    <EditText
+        android:id="@+id/PTWtWithFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtViewWeightwithFood"
+        android:layout_alignBottom="@+id/txtViewWeightwithFood"
+        android:layout_toEndOf="@+id/txtViewWeightwithFood"
+        android:layout_toRightOf="@+id/txtViewWeightwithFood"
+        android:ems="10"
+        android:hint="Enter"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtViewweightOfFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtViewWeightwithFood"
+        android:layout_alignStart="@+id/txtViewWeightwithFood"
+        android:layout_below="@+id/PTWtWithFood"
+        android:layout_marginTop="22dp"
+        android:text="@string/weight_of_food_g" />
+
+    <TextView
+        android:id="@+id/txtViewfoodWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewWeightEmpty"
+        android:layout_alignRight="@+id/textViewWeightEmpty"
+        android:layout_alignTop="@+id/txtViewweightOfFood" />
+
+    <TextView
+        android:id="@+id/txtViewTotalServing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtViewweightOfFood"
+        android:layout_alignStart="@+id/txtViewweightOfFood"
+        android:layout_below="@+id/txtViewweightOfFood"
+        android:layout_marginTop="26dp"
+        android:text="@string/servings" />
+
+    <EditText
+        android:id="@+id/PTnumServings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtViewTotalServing"
+        android:layout_alignBottom="@+id/txtViewTotalServing"
+        android:layout_alignLeft="@+id/txtViewfoodWeight"
+        android:layout_alignStart="@+id/txtViewfoodWeight"
+        android:ems="10"
+        android:hint="Enter number of Servings"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtViewServingWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtViewTotalServing"
+        android:layout_alignStart="@+id/txtViewTotalServing"
+        android:layout_below="@+id/PTnumServings"
+        android:layout_marginTop="26dp"
+        android:text="@string/serving_weight" />
+
+    <TextView
+        android:id="@+id/txtViewServingWt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtViewServingWeight"
+        android:layout_alignBottom="@+id/txtViewServingWeight"
+        android:layout_alignLeft="@+id/PTnumServings"
+        android:layout_alignStart="@+id/PTnumServings"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/PTnumServings"
+        android:layout_alignRight="@+id/PTnumServings"
+        android:layout_below="@+id/txtViewServingWt"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="44dp"
+        android:onClick="back"
+        android:text="@string/back" />
+
+    <TextView
+        android:id="@+id/ResultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBack"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@+id/txtViewTotalServing"
+        android:layout_toRightOf="@+id/txtViewTotalServing" />
+
+    <Button
+        android:id="@+id/btnDeletePot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnBack"
+        android:layout_toLeftOf="@+id/txtViewServingWt"
+        android:layout_toStartOf="@+id/txtViewServingWt"
+        android:text="@string/delete_pot" />
+
+</android.widget.RelativeLayout>

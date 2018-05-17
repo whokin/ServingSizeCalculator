@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.niragmehta.assignment2.AddPot">
+
+    <TextView
+        android:id="@+id/txtPotName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="47dp"
+        android:text="@string/pot_name"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editTextPotName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPotName"
+        android:layout_alignBottom="@+id/txtPotName"
+        android:layout_alignLeft="@+id/editTextPotWeight"
+        android:layout_alignStart="@+id/editTextPotWeight"
+        android:ems="10"
+        android:hint="@string/pot_name_hint"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtPotWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPotName"
+        android:layout_alignStart="@+id/txtPotName"
+        android:layout_below="@+id/editTextPotName"
+        android:layout_marginTop="41dp"
+        android:text="@string/pot_weight"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextPotWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtPotWeight"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/txtPotWeight"
+        android:layout_toRightOf="@+id/txtPotWeight"
+        android:ems="10"
+        android:hint="@string/pot_weight_hint"
+        android:inputType="textPersonName"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextPotWeight"
+        android:layout_alignRight="@+id/editTextPotWeight"
+        android:layout_below="@+id/editTextPotWeight"
+        android:layout_marginTop="20dp"
+        android:text="@string/cancel" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:layout_toStartOf="@+id/btnCancel"
+        android:text="@string/ok" />
+</android.widget.RelativeLayout>
